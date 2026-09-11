@@ -25,8 +25,8 @@ function App() {
   // Fetch graph data from backend
   useEffect(() => {
     Promise.all([
-      fetch("http://127.0.0.1:8001/api/nodes").then((res) => res.json()),
-      fetch("http://127.0.0.1:8001/api/edges").then((res) => res.json()),
+      fetch("https://wikigraph-backend.onrender.com/api/nodes").then((res) => res.json()),
+      fetch("https://wikigraph-backend.onrender.com/api/edges").then((res) => res.json()),
     ]).then(([nodes, edges]) => {
       setAllNodes(nodes);
       setAllEdges(edges);
