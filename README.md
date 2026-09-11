@@ -310,3 +310,7 @@ Wikimedia and Wikipedia content remains subject to the applicable Wikimedia lice
 This project is provided for educational and demonstration purposes.
 
 The application source code and Wikimedia-derived data may be subject to different licensing and attribution requirements.
+
+##  Live Demo
+
+[WikiGraph](https://wikigraph-app.vercel.app)
