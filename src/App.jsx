@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { ReactFlow, Background, Controls } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
-import "./index.css";
 
 function App() {
   const [allNodes, setAllNodes] = useState([]);
@@ -20,11 +19,24 @@ function App() {
     });
   }, []);
 
-  // Find searched article
+  // Autocomplete suggestions
+  const suggestions =
+    search.trim() === ""
+      ? []
+      : allNodes
+          .filter((node) =>
+            node.title.toLowerCase().includes(search.toLowerCase())
+          )
+          .slice(0, 6);
+
+  // Find the selected/search article
   const selectedNode =
     search.trim() === ""
       ? null
-      : allNodes.find((node) =>
+      : allNodes.find(
+          (node) => node.title.toLowerCase() === search.toLowerCase()
+        ) ||
+        allNodes.find((node) =>
           node.title.toLowerCase().includes(search.toLowerCase())
         );
 
@@ -50,7 +62,7 @@ function App() {
     });
   }
 
-  // Create visible graph nodes
+  // Create graph nodes
   const visibleNodes = allNodes
     .filter((node) => connectedIds.has(String(node.id)))
     .map((node, index) => {
@@ -84,7 +96,7 @@ function App() {
       };
     });
 
-  // Create visible edges
+  // Create graph edges
   const visibleEdges = allEdges
     .filter(
       (edge) =>
@@ -98,7 +110,7 @@ function App() {
       className: "graph-edge",
     }));
 
-  // Click node → make it the new center
+  // Click a node
   const handleNodeClick = (_, node) => {
     const article = allNodes.find(
       (item) => String(item.id) === String(node.id)
@@ -110,9 +122,14 @@ function App() {
     }
   };
 
+  // Click autocomplete suggestion
+  const handleSuggestionClick = (article) => {
+    setSearch(article.title);
+    setSelectedArticle(article);
+  };
+
   return (
     <div className="app">
-
       {/* Header */}
       <header className="header">
         <div>
@@ -135,6 +152,20 @@ function App() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
+
+        {suggestions.length > 0 && (
+          <div className="suggestions">
+            {suggestions.map((article) => (
+              <button
+                key={article.id}
+                className="suggestion"
+                onClick={() => handleSuggestionClick(article)}
+              >
+                {article.title}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Graph */}
