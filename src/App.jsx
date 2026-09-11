@@ -1,14 +1,28 @@
 import { useEffect, useState } from "react";
-import { ReactFlow, Background, Controls } from "@xyflow/react";
+import {
+  ReactFlow,
+  Background,
+  Controls,
+} from "@xyflow/react";
+import {
+  forceSimulation,
+  forceLink,
+  forceManyBody,
+  forceCenter,
+  forceCollide,
+} from "d3-force";
+
 import "@xyflow/react/dist/style.css";
 
 function App() {
   const [allNodes, setAllNodes] = useState([]);
   const [allEdges, setAllEdges] = useState([]);
- const [search, setSearch] = useState("");
-const [selectedArticle, setSelectedArticle] = useState(null);
-const [showSuggestions, setShowSuggestions] = useState(true);
-  // Fetch graph data
+  const [search, setSearch] = useState("");
+  const [selectedArticle, setSelectedArticle] = useState(null);
+  const [showSuggestions, setShowSuggestions] = useState(true);
+  const [layoutNodes, setLayoutNodes] = useState([]);
+
+  // Fetch graph data from backend
   useEffect(() => {
     Promise.all([
       fetch("http://127.0.0.1:8001/api/nodes").then((res) => res.json()),
@@ -19,7 +33,7 @@ const [showSuggestions, setShowSuggestions] = useState(true);
     });
   }, []);
 
-  // Autocomplete suggestions
+  // Search suggestions
   const suggestions =
     search.trim() === ""
       ? []
@@ -29,7 +43,7 @@ const [showSuggestions, setShowSuggestions] = useState(true);
           )
           .slice(0, 6);
 
-  // Find the selected/search article
+  // Find the article matching the search
   const selectedNode =
     search.trim() === ""
       ? null
@@ -42,7 +56,7 @@ const [showSuggestions, setShowSuggestions] = useState(true);
 
   const selectedId = selectedNode ? String(selectedNode.id) : null;
 
-  // Find connected articles
+  // Find the selected node's direct connections
   const connectedIds = new Set();
 
   if (selectedId) {
@@ -62,55 +76,112 @@ const [showSuggestions, setShowSuggestions] = useState(true);
     });
   }
 
-  // Create graph nodes
-  const visibleNodes = allNodes
-    .filter((node) => connectedIds.has(String(node.id)))
-    .map((node, index) => {
+  const connectedNodes = allNodes.filter((node) =>
+    connectedIds.has(String(node.id))
+  );
+
+  const visibleEdges = allEdges
+    .filter(
+      (edge) =>
+        String(edge.source) === selectedId ||
+        String(edge.target) === selectedId
+    )
+    .map((edge, index) => ({
+      id: `edge-${index}`,
+      source: String(edge.source),
+      target: String(edge.target),
+      className: "graph-edge",
+    }));
+
+  // Create force-directed layout
+  useEffect(() => {
+    if (!selectedId || connectedNodes.length === 0) {
+      setLayoutNodes([]);
+      return;
+    }
+
+    const simulationNodes = connectedNodes.map((node, index) => ({
+      id: String(node.id),
+      x:
+        String(node.id) === selectedId
+          ? 0
+          : Math.cos(index) * 300,
+      y:
+        String(node.id) === selectedId
+          ? 0
+          : Math.sin(index) * 300,
+    }));
+
+    const simulationLinks = visibleEdges.map((edge) => ({
+      source: String(edge.source),
+      target: String(edge.target),
+    }));
+
+    const simulation = forceSimulation(simulationNodes)
+      .force(
+        "link",
+        forceLink(simulationLinks)
+          .id((node) => node.id)
+          .distance(220)
+          .strength(0.7)
+      )
+      .force(
+        "charge",
+        forceManyBody().strength(-500)
+      )
+      .force(
+        "center",
+        forceCenter(0, 0)
+      )
+      .force(
+        "collision",
+        forceCollide(90)
+      )
+      .stop();
+
+    // Run the simulation before displaying it
+    for (let i = 0; i < 250; i++) {
+      simulation.tick();
+    }
+
+    simulation.stop();
+
+    // Keep the selected article exactly in the center
+    const mainNode = simulationNodes.find(
+      (node) => node.id === selectedId
+    );
+
+    const offsetX = mainNode ? mainNode.x : 0;
+    const offsetY = mainNode ? mainNode.y : 0;
+
+    const positionedNodes = connectedNodes.map((node) => {
+      const simulated = simulationNodes.find(
+        (item) => item.id === String(node.id)
+      );
+
       const isSelected = String(node.id) === selectedId;
-
-      if (isSelected) {
-        return {
-          id: String(node.id),
-          position: { x: 0, y: 0 },
-          data: {
-            label: node.title,
-          },
-          className: "main-node",
-        };
-      }
-
-      const otherNodesCount = Math.max(connectedIds.size - 1, 1);
-      const angle = (index / otherNodesCount) * Math.PI * 2;
-      const radius = 400;
 
       return {
         id: String(node.id),
-        position: {
-          x: Math.cos(angle) * radius,
-          y: Math.sin(angle) * radius,
-        },
+        position: isSelected
+          ? { x: 0, y: 0 }
+          : {
+              x: simulated.x - offsetX,
+              y: simulated.y - offsetY,
+            },
         data: {
           label: node.title,
         },
-        className: "article-node",
+        className: isSelected
+          ? "main-node"
+          : "article-node",
       };
     });
 
-  // Create graph edges
-  const visibleEdges = allEdges
-  .filter(
-    (edge) =>
-      String(edge.source) === selectedId ||
-      String(edge.target) === selectedId
-  )
-  .map((edge, index) => ({
-    id: `edge-${index}`,
-    source: String(edge.source),
-    target: String(edge.target),
-    className: "graph-edge",
-  }));
+    setLayoutNodes(positionedNodes);
+  }, [selectedId, allNodes, allEdges]);
 
-  // Click a node
+  // Clicking a graph node
   const handleNodeClick = (_, node) => {
     const article = allNodes.find(
       (item) => String(item.id) === String(node.id)
@@ -123,16 +194,15 @@ const [showSuggestions, setShowSuggestions] = useState(true);
     }
   };
 
-  // Click autocomplete suggestion
+  // Clicking a search suggestion
   const handleSuggestionClick = (article) => {
-  setSearch(article.title);
-  setSelectedArticle(article);
-  setShowSuggestions(false);
-};
+    setSearch(article.title);
+    setSelectedArticle(article);
+    setShowSuggestions(false);
+  };
 
   return (
     <div className="app">
-      {/* Header */}
       <header className="header">
         <div>
           <h1>WikiGraph</h1>
@@ -146,16 +216,16 @@ const [showSuggestions, setShowSuggestions] = useState(true);
         </div>
       </header>
 
-      {/* Search */}
       <div className="search-container">
         <input
           type="text"
           placeholder="Search Wikipedia topics..."
           value={search}
           onChange={(e) => {
-  setSearch(e.target.value);
-  setShowSuggestions(true);
-}}
+            setSearch(e.target.value);
+            setShowSuggestions(true);
+            setSelectedArticle(null);
+          }}
         />
 
         {showSuggestions && suggestions.length > 0 && (
@@ -173,9 +243,8 @@ const [showSuggestions, setShowSuggestions] = useState(true);
         )}
       </div>
 
-      {/* Graph */}
       <ReactFlow
-        nodes={visibleNodes}
+        nodes={layoutNodes}
         edges={visibleEdges}
         fitView
         onNodeClick={handleNodeClick}
@@ -184,7 +253,6 @@ const [showSuggestions, setShowSuggestions] = useState(true);
         <Controls />
       </ReactFlow>
 
-      {/* Article details */}
       {selectedArticle && (
         <aside className="article-panel">
           <button
@@ -201,14 +269,17 @@ const [showSuggestions, setShowSuggestions] = useState(true);
               {selectedArticle.description}
             </p>
           )}
+
           <p className="connection-count">
-  {allEdges.filter(
-    (edge) =>
-      String(edge.source) === String(selectedArticle.id) ||
-      String(edge.target) === String(selectedArticle.id)
-  ).length}{" "}
-  Connections
-</p>
+            {
+              allEdges.filter(
+                (edge) =>
+                  String(edge.source) === String(selectedArticle.id) ||
+                  String(edge.target) === String(selectedArticle.id)
+              ).length
+            }{" "}
+            Connections
+          </p>
 
           {selectedArticle.abstract && (
             <p className="article-abstract">
