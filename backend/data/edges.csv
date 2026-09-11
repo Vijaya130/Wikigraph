@@ -1,0 +1,743 @@
+source,target,label
+27051151,19541494,cloud
+268020,775,algorithms
+21808348,5213,computing
+5739,6021,C
+404048,1208,Alan Turing
+5309,5783,computer programs
+35458904,775,algorithms
+5783,7878457,computer
+775,59868,interpreters
+7878457,4122592,computer network
+5311,23716,Programmers
+76121942,73291755,generative AI
+1699254,4122592,computer network
+8377,454746,applications
+6596,775,algorithms
+23716,5323,computer science
+5323,775,algorithms
+775,18831,mathematics
+73291755,48795986,OpenAI
+33173,1164,artificial intelligence
+59868,15881,Java
+5783,10939,formal languages
+7878457,5272,printers
+5323,35458904,data science
+775,55981499,AlphaZero
+233488,32472154,deep learning
+54695,2091393,fault tolerance
+35458904,26685,statistics
+25652303,5323,computer science
+5323,27010,software
+48795986,586357,artificial general intelligence
+20640,23015,programming languages
+5218,5309,software
+76121942,1360091,backpropagation
+27471338,6806,memory
+73291755,19541494,cloud
+22591,19541494,cloud infrastructure
+302949,1164,artificial intelligence
+18985040,41961,processed
+20640,5739,compilers
+66294,21523,function approximation
+32472154,263636,connected
+6097297,20640,macOS
+29004,25873,RDBMS
+72038,454746,desktop applications
+72038,5739,compilers
+27471338,23862,Python
+35458904,27051151,large
+233488,66294,reinforcement learning
+775,72038,C++
+1164,18831,mathematics
+418206,5309,software
+4122592,5323,computer science
+7878457,5926,computation
+10973690,29004,SQL
+1164,73248112,large language model
+302949,76121942,neural network
+5926,1208,Alan Turing
+21808348,5739,compilers
+177789,26980,Sun Microsystems
+2884728,1164,artificial intelligence
+59868,72038,C++
+19541494,40379651,IBM
+5739,5213,computing
+23716,7878457,computer
+1164,32472154,deep learning
+454746,5311,programming
+5309,418206,execution
+41416740,233488,machine learning
+7878457,418206,carry out
+15881,18890,Windows
+4689778,454746,application software
+46630,60644,peripherals
+1164,48795986,OpenAI
+233488,404048,Computing Machinery and Intelligence
+8377,41961,data processing
+349771,76121942,neural network
+76121942,302949,Walter Pitts
+6021,23015,programming languages
+23862,189842,high-level
+27010,5323,computer science
+25873,494528,query language
+189842,15881,Java
+4689778,29004,SQL
+32472154,21120,neurons
+32472154,64971,Go
+23015,23716,programmer
+41755648,49242352,AlphaGo
+5311,5218,central processing unit
+5311,23015,programming languages
+59868,23862,Python
+41755648,48795986,OpenAI
+73248112,6596,image classification
+27010,5213,computing
+73291755,32472154,deep
+23968131,22194,operating systems
+27010,454746,software applications
+4122592,5272,printers
+27471338,21808348,hardware
+8377,2091393,fault tolerance
+22591,29004,SQL
+4594672,775,algorithm
+28174,5213,computing
+3206060,23015,programming language
+36674345,60644,peripheral
+189021,5783,program
+2091393,33173,Web browsers
+22194,37153,supercomputers
+3206060,72038,C++
+50408,5213,computing
+15881,6021,C
+14539,33173,web browser
+4122592,50408,computer engineering
+3118,18831,mathematics
+15881,3206060,syntax
+24185,775,algorithm
+36674345,5323,computer science
+8377,33173,web browser
+18985040,5323,computer science
+5309,14539,Internet
+22194,189021,system software
+233488,21523,neural networks
+5213,5783,computer program
+18890,46630,embedded systems
+72038,775,algorithms
+21808348,7878457,computer
+5311,5783,programs
+5323,8377,database
+33173,33139,the Web
+48795986,73248112,large language models
+22194,46630,embedded
+59868,5739,compilation
+25873,23968131,NoSQL
+5323,46630,embedded systems
+5323,233488,machine learning
+72038,18890,Windows
+263636,586357,artificial general intelligence
+22194,19541494,cloud computing
+775,24185,pseudocode
+6097297,5309,software
+73248112,40379651,IBM
+14539,36674345,information services
+4122592,46630,embedded networks
+33139,454746,application software
+5309,59868,interpreter
+22194,5309,software
+233488,349771,artificial neurons
+33139,15881,Java
+8377,36674345,information technology
+41755648,66294,reinforcement learning
+21808348,1208,Alan Turing
+18890,22194,operating system
+18890,12610483,Android
+55981499,64971,go
+54695,21808348,computer hardware
+48795986,66294,reinforcement learning
+18985040,5783,computer program
+50408,5323,computer science
+23716,23015,languages
+36674345,5311,programmable
+10939,18831,mathematics
+25873,29004,SQL
+48795986,73291755,generative AI
+27471338,15881,Java
+49242352,390214,GPUs
+775,66294,reinforcement learning
+66294,233488,machine learning
+6806,40379651,IBM
+1164,233488,learning
+4689778,8377,Database
+268020,1208,Alan Turing
+1010280,5213,computing
+5323,25652303,hardware
+40379651,5309,software
+775,5323,computer science
+177789,22591,Oracle
+21652,29468,speech recognition
+775,10939,formal language
+1164,49242352,AlphaGo
+8377,82871,data models
+5213,775,algorithmic
+233488,49242352,AlphaGo
+15881,418206,runtime
+27051151,37153,HPC-based
+26685,7878457,computers
+3118,7878457,computers
+36674345,1164,artificial intelligence
+9251,18831,mathematics
+18831,3118,arithmetic
+586357,48795986,OpenAI
+5309,7878457,computer
+2091393,40379651,IBM
+8377,5218,processors
+233488,21120,neuron
+46630,6806,computer memory
+5309,189842,high-level programming languages
+35458904,233488,machine learning
+76121942,21120,neurons
+8377,10973690,database models
+5783,3206060,syntax
+27051151,40379651,IBM
+32472154,6596,computer vision
+1010280,4122592,networked
+5323,6596,computer vision
+7878457,18985040,information
+73248112,21523,neural network
+21523,1360091,backpropagation
+5218,390214,graphics processing units
+5323,5213,computing
+7878457,21808348,hardware
+15881,37153,supercomputers
+35458904,18985040,data
+233488,5783,programmed
+20640,18890,Microsoft Windows
+15881,23716,programmers
+18890,19541494,cloud computing
+21808348,5218,central processing unit
+21808348,5309,software
+8377,6806,computer memory
+775,5926,computation
+1164,7878457,computational systems
+454746,5783,program
+268020,66294,reinforcement learning
+7878457,6806,computer memory
+73248112,48795986,OpenAI
+5311,27010,software engineering
+27051151,41961,data-processing
+494528,8377,databases
+8377,1010280,file system
+233488,64971,Go
+82871,18985040,data
+23862,3206060,syntax
+5783,5218,central processing unit
+23716,775,algorithm
+302949,18831,mathematics
+5309,19541494,cloud computing
+233488,32040137,technological unemployment
+5739,5309,software
+25873,8377,database
+10973690,8377,database
+18985040,7878457,digital computer
+44578,5323,computer science
+1164,404048,Computing Machinery and Intelligence
+29004,8377,database
+12610483,19541494,cloud
+263636,73248112,large language models
+5213,21808348,hardware
+5311,6806,computer memory
+189021,5309,software
+5783,23015,programming language
+5739,72038,C++
+55981499,76121942,neural networks
+5739,27471338,Object-oriented programming
+49242352,55981499,AlphaZero
+10973690,25873,relational databases
+29468,27051151,big data
+59868,6021,C
+36674345,1208,Alan Turing
+5323,1164,Artificial intelligence
+27051151,494528,querying
+41755648,64971,Go
+5323,5926,computation
+4122592,1699254,networking hardware
+32472154,390214,graphics processing units
+23015,6806,memory
+5926,3118,arithmetic
+37153,5218,processors
+25652303,7878457,computer
+23716,36674345,information technology
+1164,390214,graphics processing units
+32472154,48795986,OpenAI
+32040137,586357,artificial general intelligence
+27010,5311,computer programming
+6021,46630,embedded systems
+26685,27051151,big data
+6021,23862,Python
+5272,14539,internet
+7878457,5309,software
+72038,23862,Python
+35458904,82871,structured
+15881,72038,C++
+5213,5309,software
+18985040,35458904,data science
+5783,189021,system software
+5783,775,algorithm
+390214,5218,CPU
+5739,5218,CPU
+50408,21808348,computer hardware
+32472154,21652,natural language processing
+233488,1208,Alan Turing
+1360091,21523,neural network
+50408,1164,artificial intelligence (AI)
+233488,26685,Statistics
+1164,586357,artificial general intelligence
+23015,25652303,computer architecture
+20903754,32040137,displacing workers
+15881,177789,Java Community Process
+7878457,454746,application software
+27010,9251,engineering
+72038,6021,C programming language
+233488,40379651,IBM
+32472154,233488,machine learning
+54695,37153,supercomputers
+20640,6021,C
+48795986,1164,artificial intelligence
+55981499,5783,computer program
+22194,454746,applications
+349771,21120,biological neuron
+48795986,32472154,deep learning
+349771,1360091,backpropagation
+35458904,5323,computer science
+6806,22194,operating systems
+418206,5213,computing
+41961,18985040,data
+19541494,14539,Internet
+1208,7878457,computer
+23015,21808348,hardware
+1164,19541494,cloud computing
+5323,4122592,networks
+21523,23862,Python
+23015,5783,computer programs
+8377,4122592,networking
+5739,59868,interpreter
+7878457,3118,arithmetic
+25873,22591,Oracle Corporation
+5783,5739,compiler
+8377,5213,computing
+404048,40379651,IBM
+10939,5323,computer science
+6097297,189021,system software
+28174,54695,RAID
+18831,5323,computer science
+5311,775,algorithms
+23015,5739,compilation
+2928,1164,artificial intelligence
+189021,22194,operating system
+22194,23015,programming languages
+23015,59868,interpretation
+49242352,233488,machine learning
+21523,1164,artificial intelligence
+3206060,6021,C
+4122592,14539,Internet
+32472154,19541494,cloud computing
+22194,40379651,IBM
+22194,5783,computer programs
+26980,21808348,computer hardware
+233488,48795986,OpenAI
+20903754,1164,artificial intelligence
+76121942,1164,artificial intelligence
+4122592,7878457,computers
+2928,5323,computer science
+20640,1010280,file system
+19541494,22591,Oracle
+6097297,1010280,file systems
+6021,23716,programmer
+50408,18831,mathematics
+5213,7878457,computing machinery
+32040137,20903754,robotics
+1164,9251,engineering
+349771,21523,artificial neural network
+7878457,60644,peripheral
+50408,22194,operating systems
+22194,6097297,Linux
+23015,418206,Execution
+5218,22194,operating systems
+1164,5323,computer science
+5323,22194,operating systems
+233488,18985040,data
+1010280,454746,applications
+35458904,28174,storage
+49242352,40379651,IBM
+5213,50408,computer engineering
+36674345,5213,computing
+1164,302949,Pitts
+26685,18985040,data
+8377,29004,SQL
+27010,2928,Association for Computing Machinery
+6097297,22194,operating systems
+23716,50408,computer engineering
+263636,5213,computational
+24185,6021,C
+36674345,50408,computer engineering
+24185,72038,C++
+5218,60644,peripheral
+189842,7878457,computer
+27471338,20640,macOS
+18985040,26685,statistics
+2091393,21808348,hardware
+6021,22194,operating systems
+32472154,775,algorithms
+390214,1164,artificial intelligence
+5213,40379651,IBM
+10973690,494528,query language
+268020,5323,computer science
+23862,27471338,object-oriented programming
+21808348,23015,programming language
+49242352,66294,reinforcement learning
+73291755,21523,neural networks
+3206060,23862,Python
+5739,189842,high-level programming language
+8377,2928,ACM
+40379651,19541494,cloud computing
+10973690,82871,data model
+23968131,25873,relational databases
+21652,21391751,Turing test
+6097297,46630,embedded systems
+29004,82871,structured data
+15881,33173,web browsers
+8377,494528,query languages
+8377,22194,operating system
+775,418206,executed
+50408,37153,supercomputers
+1164,64971,Go
+76121942,263636,connectionism
+7878457,14539,Internet
+32472154,41416740,deep belief networks
+1164,21652,natural language processing
+5311,7878457,computers
+454746,7878457,computer
+775,4594672,problems
+20640,72038,C++
+1164,73291755,generative AI
+21652,1208,Alan Turing
+72038,40379651,IBM
+1164,1208,Alan Turing
+23862,33173,web browser
+26980,5309,software
+41416740,32472154,deep learning
+5323,50408,computer engineering
+35458904,18831,mathematics
+24185,23716,Programmers
+37153,19541494,Cloud computing
+349771,27471338,object-oriented
+32472154,21808348,computer hardware
+55981499,775,algorithm
+418206,5783,computer program
+8377,28174,data storage
+21652,233488,Machine learning
+23015,189842,high-level
+5783,418206,execute
+5926,7878457,computers
+3206060,5739,compiler
+189842,23015,programming language
+37153,40379651,IBM
+1010280,7878457,computer
+27051151,454746,software
+23015,10939,formal language
+5323,21652,natural language processing
+54695,7878457,computer
+9251,27010,software
+21523,349771,artificial neurons
+27471338,775,algorithms
+33139,14539,Internet
+1699254,788676,network services
+41755648,73248112,large language models
+15881,26980,Sun Microsystems
+14539,788676,applications and services
+27471338,1164,artificial intelligence
+21391751,404048,Computing Machinery and Intelligence
+5311,189842,high-level programming languages
+5272,60644,peripheral
+21652,404048,Computing Machinery and Intelligence
+5218,6806,memory
+41755648,21523,neural networks
+22591,48795986,OpenAI
+33139,1010280,file systems
+233488,302949,Walter Pitts
+59868,5309,software
+40379651,1164,artificial intelligence
+50408,5309,software
+5218,7878457,computer
+5213,36674345,information technology
+72038,6097297,Linux
+66294,21652,natural language processing
+6021,5218,CPU
+40379651,37153,supercomputers
+5309,4122592,networking
+29004,18985040,data
+775,3118,arithmetic
+14539,4122592,computer networks
+418206,7878457,computer
+50408,4122592,computer networks
+29004,22591,Oracle Corporation
+268020,76121942,neural networks
+20903754,268020,evolutionary computation
+27051151,72038,C++
+2884728,73248112,large language models
+6596,26685,statistics
+1164,26685,statistics
+5323,18831,mathematics
+21523,233488,machine learning
+6097297,18890,Microsoft Windows
+6021,27471338,object orientation
+50408,25652303,computer architecture
+15881,27471338,object-oriented
+66294,64971,Go
+15881,189842,high-level
+72038,189842,high-level
+29004,23968131,NoSQL
+775,73248112,large language models
+14539,21808348,hardware
+32472154,49242352,AlphaGo
+35458904,19541494,Cloud computing
+24185,15881,Java
+5323,5218,central processing unit
+3206060,7878457,computer
+7878457,5311,programmed
+418206,59868,interpreter
+586357,1164,artificial intelligence
+6596,1164,artificial intelligence
+23015,27471338,Object-oriented programming
+7878457,37153,supercomputer
+21652,7878457,computer
+8377,54695,RAID
+36674345,4122592,computer networks
+22194,18890,Microsoft Windows
+5218,5783,computer program
+4122592,60644,peripherals
+23968131,8377,database
+49242352,32472154,deep learning
+177789,15881,Java language
+7878457,5783,programs
+189021,454746,application
+1164,20903754,robotics
+33139,33173,web browsers
+6097297,25652303,computer architectures
+6021,72038,C++
+26980,36674345,information technology
+1164,5309,software
+5309,5311,programming
+21523,21120,neurons
+24185,5739,compiled
+233488,21391751,imitate a human
+23015,24185,pseudocode
+4122592,33139,World Wide Web
+233488,775,algorithms
+5739,10939,formal languages
+35458904,36674345,information technology
+189842,25652303,system architecture
+5783,5309,software
+73291755,233488,learn the underlying patterns
+23716,27010,software engineering
+5309,5739,compiler
+18985040,233488,machine learning
+1010280,22194,operating system
+775,44578,big O notation
+40379651,6097297,Linux
+46630,189842,high-level programming language
+15881,23015,programming language
+6021,25652303,computer architectures
+20903754,5309,software
+2091393,5309,software
+33173,18890,Windows
+22194,21808348,computer hardware
+20640,22194,operating system
+23968131,494528,query languages
+5213,35458904,data science
+5739,46630,embedded systems
+28174,18985040,data
+454746,5309,software
+29468,32472154,deep learning
+23862,233488,machine learning
+76121942,349771,Neurons
+49242352,5783,computer program
+73291755,73248112,large language models
+15881,22591,Oracle
+6021,6806,memory
+21652,5323,computer science
+72038,27471338,object-oriented
+27051151,22591,Oracle Corporation
+5739,23015,programming language
+2884728,5323,computer science
+5783,27010,Software engineering
+18985040,27051151,big data
+33139,4122592,computer networks
+21652,1164,artificial intelligence
+3118,26685,statistics
+66294,49242352,AlphaGo
+15881,5739,compiled
+6021,5739,compilers
+5323,1208,Alan Turing
+23862,6021,C
+21391751,1164,exhibit intelligent behaviour
+349771,24185,pseudocode
+82871,21808348,hardware
+404048,21391751,Turing test
+4122592,788676,services
+454746,189021,system
+23716,40379651,IBM
+32472154,349771,artificial neurons
+36674345,14539,Internet
+6097297,60644,peripherals
+5783,22194,operating system
+349771,302949,Walter Pitts
+82871,23015,programming languages
+23968131,27051151,big data
+27051151,25873,Codd's relational model
+1164,21391751,Turing test
+775,41961,data processing
+23716,189021,system software
+72038,22194,operating systems
+8377,5309,software
+268020,1164,artificial intelligence
+7878457,5218,central processing unit
+6806,7878457,computer
+1360091,233488,machine learning
+32472154,1360091,backpropagation
+41755648,73291755,generative AI
+10939,23015,programming languages
+40379651,36674345,computer services
+23015,3206060,syntax
+6596,32472154,Deep Learning
+20640,6097297,Linux
+10973690,18985040,data
+22194,12610483,Android
+2928,12953246,IEEE Computer Society
+15881,25652303,computer architecture
+23968131,29004,SQL
+5218,3118,arithmetic
+6596,9251,engineering
+49242352,5218,CPUs
+189842,27471338,object-oriented programming
+49242352,64971,Go
+82871,41961,data processing
+233488,26980,Sun Microsystems
+775,268020,evolutionary
+5323,40379651,IBM
+73248112,21652,natural language processing
+72038,1010280,file system
+18985040,8377,databases
+14539,33139,World Wide Web
+21391751,1208,Alan Turing
+32040137,1164,artificial intelligence
+404048,1164,artificial intelligence
+8377,23968131,NoSQL
+29004,6021,C
+36674345,7878457,computers
+27471338,18985040,data
+5309,775,algorithms
+49242352,1164,artificial intelligence
+22591,8377,database software
+50408,20903754,robotics
+37153,7878457,computer
+29004,40379651,IBM
+23716,5311,computer programming
+72038,8377,databases
+18985040,1164,artificial intelligence
+27471338,5309,software
+5213,5323,computer science
+189842,6021,C language
+23015,22591,Oracle Corporation
+36674345,5309,software
+23862,25873,relational databases
+268020,189842,high-level programming language
+27471338,72038,C++
+22194,20640,macOS
+82871,27471338,object-oriented
+27010,12953246,IEEE Computer Society
+3206060,59868,interpreter
+2928,5213,computing
+73291755,1164,artificial intelligence
+7878457,22194,operating system
+263636,32472154,deep learning
+29004,15881,Java
+5739,22194,operating system
+5783,454746,application software
+66294,26685,statistics
+775,2884728,automated reasoning
+60644,7878457,computer
+6097297,12610483,Android
+1208,775,algorithm
+82871,8377,database
+21808348,5783,computer programs
+775,1164,Artificial intelligence
+6097297,14539,Internet
+1164,41755648,Google DeepMind
+12610483,5272,printers
+22591,1164,artificial intelligence
+1164,27051151,large amounts of data
+36674345,26685,statistical
+5323,4594672,problems
+263636,302949,Walter Pitts
+4122592,454746,applications
+40379651,15881,Java
+33173,22194,operating system
+12610483,22194,operating system
+25652303,50408,computer engineering
+41755648,55981499,AlphaZero
+9251,5309,software
+1208,5926,computation
+27471338,5783,computer program
+775,41755648,Google DeepMind
+5323,12953246,IEEE Computer Society
+6021,454746,application software
+302949,5323,computer science
+32472154,29468,speech recognition
+233488,1164,artificial intelligence
+73248112,32472154,deep neural networks
+6021,37153,supercomputers
+5783,59868,interpreter
+36674345,21808348,hardware
+23716,189842,high-level programming language
+29004,23862,Python
+5783,21808348,computer hardware
+25873,40379651,IBM
+59868,5213,computing
+5309,25652303,computer architectures
+55981499,1164,artificial intelligence
+37153,6097297,Linux
+40379651,29004,SQL programming language
+233488,55981499,AlphaZero
+15881,20640,macOS
+5783,5311,computer programming
+50408,27010,software engineering
+8377,25873,Relational databases
+24185,3206060,syntax
+50408,9251,engineering
+1164,2884728,reasoning
+41755648,1164,artificial intelligence
+27471338,23015,language
+5323,2928,Association for Computing Machinery
+5213,27010,software engineering
+24185,5323,computer science
+586357,41755648,Google DeepMind
+5926,5323,Computer science
+32472154,21523,neural networks
+15881,6097297,Linux
+26980,7878457,computers
+6596,390214,consumer graphics hardware
+23716,35458904,data science
+1164,263636,connectionism
+8377,4689778,security
+72038,15881,Java
+25652303,37153,supercomputer
+23716,1164,AI
+6021,15881,Java
+5926,418206,execution
+7878457,189021,system software
+18831,9251,engineering
+33173,454746,application
+775,5783,computer programs
+5218,19541494,Cloud computing
