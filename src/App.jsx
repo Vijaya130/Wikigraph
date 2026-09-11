@@ -5,9 +5,9 @@ import "@xyflow/react/dist/style.css";
 function App() {
   const [allNodes, setAllNodes] = useState([]);
   const [allEdges, setAllEdges] = useState([]);
-  const [search, setSearch] = useState("");
-  const [selectedArticle, setSelectedArticle] = useState(null);
-
+ const [search, setSearch] = useState("");
+const [selectedArticle, setSelectedArticle] = useState(null);
+const [showSuggestions, setShowSuggestions] = useState(true);
   // Fetch graph data
   useEffect(() => {
     Promise.all([
@@ -98,17 +98,17 @@ function App() {
 
   // Create graph edges
   const visibleEdges = allEdges
-    .filter(
-      (edge) =>
-        connectedIds.has(String(edge.source)) &&
-        connectedIds.has(String(edge.target))
-    )
-    .map((edge, index) => ({
-      id: `edge-${index}`,
-      source: String(edge.source),
-      target: String(edge.target),
-      className: "graph-edge",
-    }));
+  .filter(
+    (edge) =>
+      String(edge.source) === selectedId ||
+      String(edge.target) === selectedId
+  )
+  .map((edge, index) => ({
+    id: `edge-${index}`,
+    source: String(edge.source),
+    target: String(edge.target),
+    className: "graph-edge",
+  }));
 
   // Click a node
   const handleNodeClick = (_, node) => {
@@ -119,14 +119,16 @@ function App() {
     if (article) {
       setSelectedArticle(article);
       setSearch(article.title);
+      setShowSuggestions(false);
     }
   };
 
   // Click autocomplete suggestion
   const handleSuggestionClick = (article) => {
-    setSearch(article.title);
-    setSelectedArticle(article);
-  };
+  setSearch(article.title);
+  setSelectedArticle(article);
+  setShowSuggestions(false);
+};
 
   return (
     <div className="app">
@@ -150,10 +152,13 @@ function App() {
           type="text"
           placeholder="Search Wikipedia topics..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => {
+  setSearch(e.target.value);
+  setShowSuggestions(true);
+}}
         />
 
-        {suggestions.length > 0 && (
+        {showSuggestions && suggestions.length > 0 && (
           <div className="suggestions">
             {suggestions.map((article) => (
               <button
@@ -196,6 +201,14 @@ function App() {
               {selectedArticle.description}
             </p>
           )}
+          <p className="connection-count">
+  {allEdges.filter(
+    (edge) =>
+      String(edge.source) === String(selectedArticle.id) ||
+      String(edge.target) === String(selectedArticle.id)
+  ).length}{" "}
+  Connections
+</p>
 
           {selectedArticle.abstract && (
             <p className="article-abstract">

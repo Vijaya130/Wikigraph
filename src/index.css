@@ -320,3 +320,9 @@ body {
   background: #f5f3ff;
   color: #6d28d9;
 }
+.connection-count {
+  margin: 12px 0 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7c3aed;
+}
