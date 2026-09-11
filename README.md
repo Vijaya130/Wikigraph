@@ -1,4 +1,4 @@
-# WikiGraph 🕸️
+# WikiGraph 
 
 > Explore how knowledge connects.
 
@@ -249,7 +249,7 @@ Open the URL displayed by Vite in your browser.
 
 ---
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 The FastAPI backend provides the following endpoints:
 
@@ -264,7 +264,7 @@ The frontend retrieves the processed graph data from these endpoints and renders
 
 ---
 
-## 🔎 Example Exploration
+##  Example Exploration
 
 A typical WikiGraph exploration looks like:
 
