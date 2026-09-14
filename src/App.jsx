@@ -24,14 +24,30 @@ function App() {
 
   // Fetch graph data from backend
   useEffect(() => {
-    Promise.all([
-      fetch("https://wikigraph-backend.onrender.com/api/nodes").then((res) => res.json()),
-      fetch("https://wikigraph-backend.onrender.com/api/edges").then((res) => res.json()),
-    ]).then(([nodes, edges]) => {
+  const loadGraphData = async () => {
+    try {
+      const [nodesResponse, edgesResponse] = await Promise.all([
+        fetch("https://wikigraph-backend.onrender.com/api/nodes"),
+        fetch("https://wikigraph-backend.onrender.com/api/edges"),
+      ]);
+
+      if (!nodesResponse.ok || !edgesResponse.ok) {
+        throw new Error("Backend is still waking up");
+      }
+
+      const nodes = await nodesResponse.json();
+      const edges = await edgesResponse.json();
+
       setAllNodes(nodes);
       setAllEdges(edges);
-    });
-  }, []);
+    } catch (error) {
+      console.log("Backend not ready, retrying...");
+      setTimeout(loadGraphData, 3000);
+    }
+  };
+
+  loadGraphData();
+}, []);
 
   // Search suggestions
   const suggestions =
