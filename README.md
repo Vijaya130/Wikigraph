@@ -7,7 +7,7 @@ WikiGraph is an interactive knowledge graph built from real Wikimedia Structured
 Instead of simply searching for an article, WikiGraph allows users to explore the relationships between Wikipedia topics through actual article-to-article links. Search for a topic, view its connected articles, and navigate through the knowledge graph interactively.
 
 ---
-## 🚀 Live Demo
+##  Live Demo
 
 **Live Application:** https://wikigraph-app.vercel.app/
 
